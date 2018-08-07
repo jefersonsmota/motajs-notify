@@ -1,6 +1,5 @@
 # motajs-notify
 Very simple and lite web notification.
-<<<<<<< HEAD
 
 
 ## Getting Started
@@ -20,7 +19,4 @@ and use!
 ```
 
 ## License
-
-  MIT
-=======
->>>>>>> e2bb5c9ccb16faaca33bc7e37726d8efbf30acec
+MIT
