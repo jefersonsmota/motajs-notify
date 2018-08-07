@@ -1,0 +1,25 @@
+{
+  "name": "@motajs/notify",
+  "version": "1.0.0",
+  "description": "Very simple and lite web notification.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefersonsmota/motajs-notify.git"
+  },
+  "keywords": [
+    "notify",
+    "simple",
+    "lite",
+    "motajs"
+  ],
+  "author": "Jeferson Mota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jefersonsmota/motajs-notify/issues"
+  },
+  "homepage": "https://github.com/jefersonsmota/motajs-notify#readme"
+}

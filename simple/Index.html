@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notify</title>
+    <link rel="stylesheet" href="../dist/css/notify.min.css">
+    <script src="../dist/js/notify.min.js"></script>
+</head>
+<body>
+
+<h2>Notify</h2>
+
+<button id="myBtn">Open Notify</button>
+
+<script>
+var btn = document.getElementById("myBtn");
+btn.addEventListener('click', showNotify, false);
+
+function showNotify () {
+    notify.erro('This is an erro notification');
+    notify.warning('This is a warning notification');
+    notify.info('This is an info notification');
+    notify.success('This is a success notification');
+}
+</script>
+
+</body>
+</html>

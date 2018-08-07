@@ -1,0 +1,92 @@
+/* 
+ motaJs@notify.js 1.0.0
+ Very simple and light web notification.
+ (c) 2018 Jeferson Mota <jsmota.dev@gmail.com>
+ This notify.js is freely distributable under the MIT license
+*/
+
+/* notify.css */
+/* The notify container (background) */
+.notify-container {
+    padding-left: 5px;
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    width: 310px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+	-webkit-animation-name: notifyFadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: notifyFadeIn;
+    animation-duration: 0.4s;
+}
+
+/* Notify element */
+.notify {
+    position: relative;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px rgb(206, 206, 206);
+    top: 0px;
+    right: 0px;
+    background-color: #f44336;
+	opacity: 0.85;
+	transition: opacity 0.85s;	
+    width: 300px;
+    -webkit-animation-name: notifySlideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: notifySlideIn;
+    animation-duration: 0.4s;
+}
+
+/* Notify body content */
+.notify-body {
+	padding: 12px 16px 16px 16px;
+    color: white;
+    font-family: Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.notify.notify-success {
+	background-color: #4CAF50;
+}
+
+.notify.notify-info {
+	background-color: #2196F3;
+}
+
+.notify.notify-warning {
+	background-color: #ff9800;
+}
+
+/* Add Animation */
+@-webkit-keyframes notifySlideIn {
+    from {right: -400px; opacity: 0} 
+    to {right: 0; opacity: 1}
+}
+
+@keyframes notifySlideIn {
+    from {right: -400px; opacity: 0}
+    to {right: 0; opacity: 1}
+}
+
+@-webkit-keyframes notifySlideOut {
+    from {right: 0; opacity: 1}
+    to {right: -400px; opacity: 0} 
+}
+
+@keyframes notifySlideOut {
+    from {right: 0; opacity: 1}
+    to {right: -400px; opacity: 0}
+}
+
+@-webkit-keyframes notifyFadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes notifyFadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
