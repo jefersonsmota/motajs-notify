@@ -17,6 +17,8 @@ and use!
     // or notify.success('Your message notification');
     // timout is default 5000 ms
 ```
+## Authors
+* **Jeferson Mota** 
 
 ## License
 MIT
