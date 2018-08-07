@@ -1,5 +1,5 @@
 {
-  "name": "@motajs/notify",
+  "name": "motajs-notify",
   "version": "1.0.0",
   "description": "Very simple and lite web notification.",
   "main": "index.js",
