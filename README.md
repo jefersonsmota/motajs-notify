@@ -17,6 +17,16 @@ and use!
     // or notify.success('Your message notification');
     // timout is default 5000 ms
 ```
+
+notifications supported
+```js
+    notify.erro('This is an erro notification');
+    notify.warning('This is a warning notification');
+    notify.info('This is an info notification');
+    notify.success('This is a success notification');
+```
+
+
 ## Authors
 * **Jeferson Mota** 
 
