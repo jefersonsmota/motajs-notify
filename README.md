@@ -1,2 +1,2 @@
 # motajs-notify
-Very simple and light web notification.
+Very simple and lite web notification.
