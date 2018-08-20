@@ -1,0 +1,1 @@
+import notify from "./dist/js/notify";

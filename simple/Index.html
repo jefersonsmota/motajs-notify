@@ -19,10 +19,12 @@ var btn = document.getElementById("myBtn");
 btn.addEventListener('click', showNotify, false);
 
 function showNotify () {
-    notify.erro('This is an erro notification');
+    notify.error('This is an erro notification');
     notify.warning('This is a warning notification');
     notify.info('This is an info notification');
     notify.success('This is a success notification');
+
+    notify.show('This is a default notification', '');
 }
 </script>
 

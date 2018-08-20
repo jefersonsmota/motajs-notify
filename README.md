@@ -1,6 +1,5 @@
 # motajs-notify
-Very simple and lite web notification.
-
+Very simple and minimum web notification.
 
 ## Getting Started
 Insert css and js files
@@ -20,10 +19,15 @@ and use!
 
 notifications supported
 ```js
-    notify.erro('This is an erro notification');
+    notify.error('This is an erro notification');
     notify.warning('This is a warning notification');
     notify.info('This is an info notification');
     notify.success('This is a success notification');
+
+    // or
+
+    notify.show('Message text', 'messageType', timout);
+    // messageType: 'error' | 'info' | 'success' | 'warning'
 ```
 
 

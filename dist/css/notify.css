@@ -1,5 +1,5 @@
 /* 
- motaJs@notify.js 1.0.0
+ motaJs@notify.js 1.0.2
  Very simple and light web notification.
  (c) 2018 Jeferson Mota <jsmota.dev@gmail.com>
  This notify.js is freely distributable under the MIT license
@@ -28,9 +28,9 @@
     position: relative;
     margin-top: 10px;
     box-shadow: 0px 0px 5px rgb(206, 206, 206);
+    background-color: #2196F3;
     top: 0px;
     right: 0px;
-    background-color: #f44336;
 	opacity: 0.85;
 	transition: opacity 0.85s;	
     width: 300px;
@@ -46,6 +46,10 @@
     color: white;
     font-family: Segoe UI, Roboto, Arial, Helvetica, sans-serif;
     font-size: 1em;
+}
+
+.notify.notify-error {
+	background-color: #f44336;
 }
 
 .notify.notify-success {

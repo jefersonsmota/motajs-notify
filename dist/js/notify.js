@@ -1,4 +1,4 @@
-// motaJs@notify.js 1.0.0
+// motaJs@notify.js 1.0.2
 // Very simple and lite web notification.
 // (c) 2018 Jeferson Mota <jsmota.dev@gmail.com>
 // This notify.js is freely distributable under the MIT license
@@ -81,8 +81,8 @@
      * @param {number} timeOut timout message || default 5000
      * @
      */
-    notify.erro = function (message, timeOut) {
-        _notify(message, '', timeOut);
+    notify.error = function (message, timeOut) {
+        _notify(message, 'error', timeOut);
     };
 
     /**
@@ -103,6 +103,16 @@
      */
     notify.warning = function (message, timeOut) {
         _notify(message, 'warning', timeOut);
+    };
+
+    /**
+     * @function show notify | color: yellow
+     * @param {string} message message that will show
+     * @param {string} messageType type of message: error | info | success | warning
+     * @param {number} timeOut timout message || default 5000
+     */
+    notify.show = function (message, messageType, timeOut) {
+        _notify(message, messageType, timeOut);
     };
 
     if (typeof module === 'object' && typeof module.exports === 'object') {
