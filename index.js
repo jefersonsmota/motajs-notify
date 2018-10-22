@@ -1,1 +1,1 @@
-import notify from "./dist/js/notify";
+export { default as notify } from "./dist/js/notify";

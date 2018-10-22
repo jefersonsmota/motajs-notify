@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Notify</title>
-    <link rel="stylesheet" href="../dist/css/notify.min.css">
-    <script src="../dist/js/notify.min.js"></script>
+    <link rel="stylesheet" href="../dist/css/notify.css">
+    <script src="../dist/js/notify.js"></script>
 </head>
 <body>
 
@@ -16,7 +16,10 @@
 
 <script>
 var btn = document.getElementById("myBtn");
-btn.addEventListener('click', showNotify, false);
+if(btn.addEventListener)
+    btn.addEventListener('click', showNotify, false);
+else if (btn.attachEvent)
+    btn.attachEvent('onclick', showNotify);
 
 function showNotify () {
     notify.error('This is an erro notification');

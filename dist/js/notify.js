@@ -1,4 +1,4 @@
-// motaJs@notify.js 1.0.2
+// motaJs@notify.js 1.0.5
 // Very simple and lite web notification.
 // (c) 2018 Jeferson Mota <jsmota.dev@gmail.com>
 // This notify.js is freely distributable under the MIT license
@@ -7,23 +7,26 @@
 
     var notify = {};
 
-    var container = document.createElement('div');
-    container.classList.add('notify-container');
+    var container = document.createElement('DIV');
+    container.className = 'notify-container';
+
     var isContainerShow = false;
 
     function _notify(message, messageType, timeOut) {
         timeOut = timeOut || 5000;
+        var timeoutEvent;
 
         var body = document.getElementsByTagName('BODY')[0];
 
-        var notifyFlag = document.createElement('div');
-        notifyFlag.classList.add('notify');
-        if (messageType) notifyFlag.classList.add('notify-' + messageType);
+        var notifyFlag = document.createElement('DIV');
 
-        var flagBody = document.createElement('div');
-        flagBody.classList.add('notify-body');
+        notifyFlag.className = 'notify';
+        if (messageType) notifyFlag.className = notifyFlag.className + ' ' + 'notify-' + messageType;
 
-        var span = document.createElement('span');
+        var flagBody = document.createElement('DIV');
+        flagBody.className = 'notify-body';
+        
+        var span = document.createElement('SPAN');
         var text = document.createTextNode(message);
 
         span.appendChild(text);
@@ -32,37 +35,53 @@
         notifyFlag.appendChild(flagBody);
         container.insertBefore(notifyFlag, container.firstChild);
 
-        notifyFlag.addEventListener('click', function () {
-            container.removeChild(notifyFlag);
-            clearTimeout(timeoutEvent);
-            if (container.childElementCount == 0) {
-                body.removeChild(container);
-                isContainerShow = false;
-            }
-        }, false);
-
         if (!isContainerShow) {
             body.appendChild(container);
             isContainerShow = true;
         }
 
-        var timeoutEvent;
-
         timeoutEvent = setTimeout(function () {
             if (container.contains(notifyFlag)) {
-                notifyFlag.style.WebkitAnimation = "notifySlideOut 0.5s";
-                notifyFlag.style.animation = "notifySlideOut 0.5s";
+                notifyFlag.style.WebkitAnimation = 'notifySlideOut 0.5s';
+                notifyFlag.style.animation = 'notifySlideOut 0.5s';
+                notifyFlag.style.animationFillMode = 'forwards';
 
                 setTimeout(function () {
-                    container.removeChild(notifyFlag);
+                    if (container.childNodes.length != 0) {
+                        try {
+                            container.removeChild(notifyFlag);
+                        } catch (error) {
+                        }
+                    }
                 }, 500);
             }
 
-            if (container.childElementCount == 0) {
+            if (container.childNodes.length == 0) {
                 body.removeChild(container);
                 isContainerShow = false;
             }
         }, timeOut);
+
+        if (notifyFlag.addEventListener) {
+            notifyFlag.addEventListener('click', function () {
+                container.removeChild(notifyFlag);
+                clearTimeout(timeoutEvent);
+                if (container.childNodes.length == 0) {
+                    body.removeChild(container);
+                    isContainerShow = false;
+                }
+            }, false);
+        }
+        else if (notifyFlag.attachEvent) {
+            notifyFlag.attachEvent('onclick', function () {
+                container.removeChild(notifyFlag);
+                clearTimeout(timeoutEvent);
+                if (container.childNodes.length == 0) {
+                    body.removeChild(container);
+                    isContainerShow = false;
+                }
+            });
+        }
     };
 
     /**
