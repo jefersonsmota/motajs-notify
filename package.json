@@ -1,6 +1,6 @@
 {
   "name": "motajs-notify",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Very simple and lite web notification.",
   "main": "index.js",
   "scripts": {  },

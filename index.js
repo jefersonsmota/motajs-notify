@@ -1,1 +1,1 @@
-export { default as notify } from "./dist/js/notify";
+module.exports = require('./dist/js/notify');

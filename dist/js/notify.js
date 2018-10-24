@@ -1,4 +1,4 @@
-// motaJs@notify.js 1.0.5
+// motaJs@notify.js 1.0.6
 // Very simple and lite web notification.
 // (c) 2018 Jeferson Mota <jsmota.dev@gmail.com>
 // This notify.js is freely distributable under the MIT license
