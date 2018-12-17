@@ -1,5 +1,5 @@
 # motajs-notify
-Very simple and minimum web notification.
+Very simple browser notification.
 
 ## Getting Started
 Insert css and js files
